@@ -76,8 +76,12 @@ sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password �
 sudo docker ps ตรวจสอบ Container
 -----------------------------------------------------------------------------------
 
- 
-
+ปัญหา ❌ “No such file or directory”
+วิธีแก้ 
+ls -l /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+ls -l /usr/bin/docker-compose
 
 
 
